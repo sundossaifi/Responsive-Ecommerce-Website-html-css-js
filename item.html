@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topico</title>
+
+    <!-- File css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="container top-nav">
+            <a href="#" class="logo">
+                <img src="img/logo-black.png" alt="logo">
+            </a>
+            <form action="" class="search">
+                <input type="search" placeholder="search for products">
+                <button type="submit">Search</button>
+            </form>
+            <div class="cart-header">
+                <div onclick="openCart()" class="icon-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="count-item">0</span>
+                </div>
+                <div class="total-price">
+                    <p>My Cart:</p>
+                    <p class="price-cart-header">$0</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="links container">
+                <i onclick="openMenu()" class="fa-solid fa-bars btn-open-menu"></i>
+                <ul id="menu">
+                    <span class="bg-overlay"></span>
+                    <i onclick="closeMenu()" class="fa-regular fa-circle-xmark btn-close-menu"></i>
+                    <img class="logo-menu" src="img/logo-black.png" alt="">
+
+                    <li class="active"><a href="./index.html">home</a></li>
+                    <li><a href="">All Product</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <div class="login-signup">
+                    <a href="">login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="">sign up <i class="fa-solid fa-user-plus"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart -->
+    <div class="cart">
+        <div class="top-cart">
+            <h3>my Cart<span class="count-item-cart">(0item in cart)</span></h3>
+            <span onclick="closeCart()" class="close-cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <div class="items-in-cart">
+
+        </div>
+
+        <div class="bottom-cart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="price-cart-total">$0</p>
+            </div>
+            <div class="button-cart">
+                <a href="" class="btn-cart">Proceed to checkout</a>
+                <button class="btn-cart trans-bg">shop more</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="item-detail">
+        <div class="container">
+            <div class="img-item">
+                <div class="big-img">
+                    <img id="big-img" src="img/product/product-1.jpg" alt="">
+                </div>
+
+                <div class="sm-imgs">
+                    <img onclick="changeItemImage(this.src)" src="img/product/product-1.jpg" alt="">
+                    <img onclick="changeItemImage(this.src)" src="img/product/product2.jpg" alt="">
+                    <img onclick="changeItemImage(this.src)" src="img/product/product1.jpg" alt="">
+                    <img onclick="changeItemImage(this.src)" src="img/product/product-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="details-item">
+                <h1 class="name">Original mobile android Dual Sim Smart phone G3</h1>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price">
+                    <p><span>$120</span></p>
+                    <p class="old-price">$170</p>
+                </div>
+                <h5>Availability:<span>in Stock</span></h5>
+                <h5>SKU:<span>Samsung C49J89: $875 Debenhams plus</span></h5>
+                <p class="text-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum autem molestias hic! Et quaerat ullam
+                    nisi atque deserunt sint vel, expedita quasi illum earum architecto nemo. Iusto sed possimus
+                    nostrum, veritatis officiis vitae aperiam tempora placeat unde quas magni provident voluptate? Enim
+                    nesciunt iure ex et optio, maxime sapiente id?</p>
+                <h4>Hurry Up! Only 98 products left in stock.</h4>
+                <button>ADD TO CART<i class="fa-solid fa-cart-plus"></i></button>
+                <div class="icons">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-solid fa-sliders"></i></span>
+                    <span><i class="fa-solid fa-print"></i></span>
+                    <span><i class="fa-solid fa-share-nodes"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slide sale -->
+    <section class="slide slide-sale">
+        <div class="container">
+            <div class="sale-sec mySwiper">
+                <div class="top-slide">
+                    <h2>On sale <span>product</span></h2>
+                </div>
+                <div id="swiper-items-sale" class="products swiper-wrapper">
+                </div>
+
+                <div class="swiper-button-next btn-swip"></div>
+                <div class="swiper-button-prev btn-swip"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- back-to-top -->
+    <div class="back-to-top">
+        <p>Back to top</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="big-row">
+                <img src="img/logo-white.png" alt="logo-white">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline free 24/24:</h5>
+                        <h6>(+100)123 456 7890</h6>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum!</p>
+            </div>
+            <div class="row">
+                <h4>FAQs & Help</h4>
+                <div class="links">
+                    <a href="#">FAQ's</a>
+                    <a href="#">Ordering Tracking</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">Events</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4>FAQs & Help</h4>
+                <div class="links">
+                    <a href="#">FAQ's</a>
+                    <a href="#">Ordering Tracking</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">Events</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+            <div class="row">
+                <h4>FAQs & Help</h4>
+                <div class="links">
+                    <a href="#">FAQ's</a>
+                    <a href="#">Ordering Tracking</a>
+                    <a href="#">Contacts</a>
+                    <a href="#">Events</a>
+                    <a href="#">Help Center</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer">
+            <div class="container">
+                <p>Copyright &copy; <span>Topico</span> All Rights Reserved</p>
+                <div class="payment-img">
+                    <img src="img/payment-1.png" alt="payment-1">
+                    <img src="img/payment-2.png" alt="payment-2">
+                    <img src="img/payment-3.png" alt="payment-3">
+                    <img src="img/payment-4.png" alt="payment-4">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/items-home.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script src="js/swiper.js"></script>
+</body>
+
+</html>

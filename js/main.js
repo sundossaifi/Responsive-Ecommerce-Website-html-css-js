@@ -89,3 +89,11 @@ function openMenu() {
 function closeMenu() {
     menu.classList.remove("active")
 }
+
+
+//Change item image 
+const bigImage = document.getElementById("big-img");
+
+function changeItemImage(img) {
+    bigImage.src = img;
+}
